@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Родственные связи тегов HTML</title>
+  </head>
+  <body>
+    <h1>Родственные связи тегов HTML</h1>
+    <h2>Задача 1</h2>
+    <p>Дан следующий код:</p>
+    <ul>
+      <li>text <a href="">link</a></li>
+      <li>text <a href="">link</a></li>
+      <li>text <a href="">link</a></li>
+      <li>
+        text <a href=""><b>bold link</b> </a>
+      </li>
+    </ul>
+    <p>Расскажите какие родительские связи вы видите.</p>
+    <p>ul имеет потомков li, для li - ul непосредственный родитель</p>
+    <p>Сам тег li также имеет внутри себя потомков a</p>
+    <h2>Задача 2</h2>
+    <table>
+      <tr>
+        <td>cell 1</td>
+        <td>cell 2</td>
+        <td>cell 3</td>
+      </tr>
+      <tr>
+        <td>cell 4</td>
+        <td>cell 5</td>
+        <td>cell 6</td>
+      </tr>
+      <tr>
+        <td>cell 7</td>
+        <td>cell 8</td>
+        <td>cell 9</td>
+      </tr>
+    </table>
+    <p>
+      table - имеет потомков, tr, td. <br />
+      непосредственные потомки table - tr tr - непосредственные родители для td
+    </p>
+    <h2>Задача 3</h2>
+    <p>Дан следующий код:</p>
+    <p>
+      This is a paragraph with text
+      <i><b>bold italic</b></i>
+      <a href="">link <i>italic</i></a
+      >.
+    </p>
+    <p>
+      Какие потомки есть у абзаца? Какие непосредственные потомки есть у абзаца?
+    </p>
+    <p>непосредственные потомки абзаца i, a</p>
+    <h2>Задача 4</h2>
+    <p>Дан следующий код:</p>
+    <p>
+      <a href=""
+        >link <i><b>bold italic</b> </i></a
+      >
+    </p>
+    <p>
+      Расскажите, какие родители есть у тега b. Кто является его
+      непосредственным родителем?
+    </p>
+    <p>
+      У тега b - непосредственный родитель тег i, также его родителями являются
+      тег a, затем тег p.
+    </p>
+  </body>
+</html>

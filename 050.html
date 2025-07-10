@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Наследование CSS-свойств</title>
+  </head>
+  <body>
+    <h1>Наследование CSS-свойств</h1>
+    <p>Пусть у нас есть абзац, а в нём какой-то текст в теге i</p>
+    <p style="color: red">This is some <i>text</i> in paragraph.</p>
+    <p>
+      Если зададим абзацу красный цвет текста, то и то, что внутри тега i также
+      покрасится в красный цвет.
+    </p>
+    <p>
+      Всё дело в том, что свойство color наследуется. Это значит, что если у
+      родительского тега задан какой-то цвет, то такой же цвет будет и у
+      потомков. Наследуются не все свойства CSS, но многие (из тех, что вы уже
+      знаете - все наследуются).
+    </p>
+    <p>
+      При желании, однако, можно переопределить свойства родителя задав селектор
+      потомка. Например давайте абзацу зададим красный цвет, а курсиву -
+      голубой.
+    </p>
+    <p style="color: red">
+      This is some <i style="color: blue">text</i> in paragraph.
+    </p>
+    <p>
+      Порядок селекторов в CSS коде в таком случае не имеет значения. Если
+      переставить местами селектор i и селектор p, всё будет работать точно
+      также.
+    </p>
+    <h2>Задача 1</h2>
+    <p>Изучив код, скажите какой цвет будет иметь текст в теге b:</p>
+    <p style="color: blue">This is some <b>text</b> in paragraph.</p>
+    <code>p { color: blue; }</code>
+    <p>
+      Цвет содержимого тега b тоже будет синий, так как он наследуется от
+      родителя. А отдельный цвет для b не задан.
+    </p>
+    <h2>Задача 2</h2>
+    <p>Изучив код, скажите какой цвет будет иметь текст в теге b:</p>
+    <p style="color: blue">
+      This is some <b style="color: red">text</b> in paragraph.
+    </p>
+    <code>p { color: blue; } b { color: red; } </code>
+    <p>
+      Тег b будем иметь красный цвет, т.к. для него задан отдельный селектор
+      отличный от родительского.
+    </p>
+    <h2>Задача 3</h2>
+    <p>Изучив код, скажите какой цвет будет иметь текст в теге b:</p>
+    <p style="color: red">
+      This is some <b style="color: blue">text</b> in paragraph.
+    </p>
+    <code>b { color: red; } p { color: blue; }</code>
+    <p>От перемены мест тегов результат не изменится</p>
+    <h2>Задача 4</h2>
+    <p>Изучив код, скажите какой цвет будет иметь текст в теге li:</p>
+    <ul style="color: blue">
+      <li>text</li>
+      <li>text</li>
+      <li>text</li>
+    </ul>
+    <code> ul { color: blue; }</code>
+    <p>
+      Свойство color будет унаследовано от родительского тега ul, поэтому цвет
+      текста содержимого li будет синим.
+    </p>
+    <h2>Задача 5</h2>
+    <p>Изучив код, скажите какой цвет будет иметь текст в теге li:</p>
+    <ul style="color: blue">
+      <li style="color: red">text</li>
+      <li style="color: red">text</li>
+      <li style="color: red">text</li>
+    </ul>
+    <code> ul { color: blue; } li { color: red; }</code>
+    <p>В данном случае цвет будет красным.</p>
+    <h2>Задача 6</h2>
+    <p>Изучив код, скажите какой цвет будет иметь текст в теге i:</p>
+    <ul style="color: blue">
+      <li style="color: red">text <i style="color: green">italic</i> text</li>
+      <li style="color: red">text <i style="color: green">italic</i> text</li>
+      <li style="color: red">text <i style="color: green">italic</i> text</li>
+    </ul>
+    <code>ul { color: blue; } li { color: red; } i { color: green; } </code>
+    <p>
+      Ссылки будут зелёными, так как для них задано свойство в отдельном
+      селекторе.
+    </p>
+    <h2>Задача 7</h2>
+    <p>Изучив код, скажите какой размер будет иметь текст в теге i:</p>
+    <ul style="font-size: 20px">
+      <li style="color: red; font-weight: bold">
+        text <i font-size="30px;">italic</i> text
+      </li>
+      <li style="color: red; font-weight: bold">
+        text <i font-size="30px;">italic</i> text
+      </li>
+      <li style="color: red; font-weight: bold">
+        text <i font-size="30px;">italic</i> text
+      </li>
+    </ul>
+    <code>
+      i { font-size: 30px; } ul { font-size: 20px; } li { color: red;
+      font-weight: bold; }</code
+    >
+    <p>
+      Размер тега будет 30px, остальные свойства будут унаследованы от
+      родителей.
+    </p>
+  </body>
+</html>
