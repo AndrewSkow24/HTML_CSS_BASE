@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сложные комбинации селектора потомков и классов в CSS</title>
+    <style>
+      * {
+        font-size: 20px;
+      }
+      .eee .bbb {
+        color: red;
+      }
+      .eee h2 {
+        color: blue;
+      }
+      .eee h2.bbb {
+        color: darkred;
+      }
+      .eee h3.bbb {
+        color: violet;
+      }
+      .eee p.bbb {
+        color: yellowgreen;
+      }
+      .eee .bbb .kkk {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="eee">
+      <p class="bbb">
+        1. Красный текст, описанный с помощью селекторов ".eee .bbb" Будет
+        применено более позднее правило
+      </p>
+      <h2>2. Заголовок h2 внутри селектора класса .eee h2</h2>
+      <h2 class="bbb">3. .eee h2.bbb { color: darkred; }</h2>
+      <h3 class="bbb">4. .eee h3.bbb { color: violet; }</h3>
+      <p class="bbb">5. .eee p.bbb { color: yellowgreen; }</p>
+      <div class="bbb">
+        <p class="kkk">6. orange text .eee .bbb .kkk { color: red; }</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Использование id в CSS</title>
+    <style>
+      #elem h2 {
+        color: red;
+      }
+      #elem .text {
+        color: green;
+      }
+      #elem p.text {
+        color: violet;
+      }
+      #elem li.text {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Задача 1</h2>
+    <p>
+      Напишите селектор, который выберет все h2, находящиеся в элементе с id,
+      равным elem. Проверьте ваш селектор на следующем коде:
+    </p>
+    <div id="elem">
+      <h2>Choose</h2>
+      <p>---</p>
+
+      <h2>Choose</h2>
+      <p>---</p>
+    </div>
+
+    <h2>Do not +++</h2>
+    <p>---</p>
+    <h2>Задача 2</h2>
+    <p>
+      Напишите селектор, который выберет все элементы с классом text,
+      находящиеся в элементе с id, равным elem. Проверьте ваш селектор на
+      следующем коде:
+    </p>
+    <div id="elem">
+      <p class="text">+++</p>
+      <p class="text">+++</p>
+
+      <ul>
+        <li class="text">+++</li>
+        <li class="text">+++</li>
+        <li class="text">+++</li>
+        <li>---</li>
+        <li>---</li>
+      </ul>
+    </div>
+
+    <p class="text">---</p>
+    <h2>Задача 3</h2>
+    <p>
+      Напишите селектор, который выберет все абзацы с классом text, находящиеся
+      в элементе с id, равным elem. Проверьте ваш селектор на следующем коде:
+    </p>
+    <div id="elem">
+      <p class="text">+++</p>
+      <p class="text">+++</p>
+
+      <ul>
+        <li class="text">---</li>
+        <li class="text">---</li>
+        <li class="text">---</li>
+        <li>---</li>
+        <li>---</li>
+      </ul>
+    </div>
+
+    <p class="text">---</p>
+    <h2>Задача 4</h2>
+    <p>
+      Напишите селектор, который выберет все li с классом text, находящиеся в
+      элементе с id, равным elem. Проверьте ваш селектор на следующем коде:
+    </p>
+    <div id="elem">
+      <p class="text">---</p>
+      <p class="text">---</p>
+
+      <ul>
+        <li class="text">+++</li>
+        <li class="text">+++</li>
+        <li class="text">+++</li>
+        <li>---</li>
+        <li>---</li>
+      </ul>
+    </div>
+
+    <p class="text">---</p>
+  </body>
+</html>

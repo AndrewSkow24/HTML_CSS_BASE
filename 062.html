@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ошибки новичков в селекторе потомков</title>
+    <style>
+      p.eee {
+        color: red;
+      }
+      p .bbb {
+        color: green;
+      }
+      .eee p.bbb {
+        color: red;
+      }
+      .eee p.bbb {
+        color: violet;
+      }
+      .eee p .bbb {
+        color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="eee">
+      1. p.eee { color: red; }
+      <span class="bbb">2. p .bbb { color: green; }</span>
+    </p>
+    <div class="eee">
+      <p class="bbb">3. .eee p.bbb { color: violet; }</p>
+      <p><span class="bbb">4. .eee p .bbb { color: red; }</span></p>
+    </div>
+  </body>
+</html>
