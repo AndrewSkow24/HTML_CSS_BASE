@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ошибка при использовании нескольких CSS селекторов</title>
+    <style>
+      /* 1 */
+      h2.zzz {
+        color: red;
+      }
+      /* 2 */
+      h2 .zzz {
+        color: green;
+      }
+      /* 3 */
+      .bbb.zzz {
+        color: blue;
+      }
+      /* 4 */
+      .bbb .zzz {
+        color: blueviolet;
+      }
+      /* 5 */
+      .bbb.zzz.xxx {
+        color: fuchsia;
+      }
+      /* 6 */
+      .bbb .zzz.xxx {
+        color: aqua;
+      }
+      /* 7 */
+      .bbb.zzz .xxx {
+        color: forestgreen;
+      }
+      /* 8 */
+      .bbb .zzz .xxx {
+        color: hotpink;
+      }
+      /* 9 */
+      #elem.bbb {
+        color: rosybrown;
+      }
+      /* 10 */
+      #elem .bbb {
+        color: gold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>задача 1</h1>
+    <h2 class="zzz">/* 1 */ h2.zzz { color: red; }</h2>
+    <h1>задача 2</h1>
+    <h2><span class="zzz">/* 2 */ h2 .zzz { color: green; }</span></h2>
+    <h1>задача 3</h1>
+    <div class="bbb zzz">/* 3 */ .bbb.zzz { color: blue; }</div>
+    <h1>задача 4</h1>
+    <div class="bbb">
+      <p class="zzz">/* 4 */ .bbb .zzz { color: blueviolet; }</p>
+    </div>
+    <h1>задача 5</h1>
+    <p class="bbb zzz xxx">/* 5 */ .bbb.zzz.xxx { color: fuchsia; }</p>
+    <h1>задача 6</h1>
+    <div class="bbb">
+      <p class="zzz xxx">/* 6 */ .bbb .zzz.xxx { color: aqua; }</p>
+    </div>
+    <h1>задача 7</h1>
+    <div class="bbb zzz">
+      <p class="xxx">.bbb.zzz .xxx { color: forestgreen; }</p>
+    </div>
+    <h1>задача 8</h1>
+    <div class="bbb">
+      <div class="zzz">
+        <p class="xxx">/* 8 */ .bbb .zzz .xxx { color: hotpink; }</p>
+      </div>
+    </div>
+    <h1>задача 9</h1>
+    <div id="elem" class="bbb">#elem.bbb { color: rosybrown; }</div>
+    <h1>задача 10</h1>
+    <div id="elem">
+      <p class="bbb">/* 10 */ #elem .bbb { color: gold; }</p>
+    </div>
+  </body>
+</html>

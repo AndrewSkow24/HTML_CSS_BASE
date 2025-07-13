@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Несколько селекторов слитно в CSS</title>
+    <style>
+      /* 1 */
+      .bbb.zzz {
+        color: red;
+      }
+      /* 2 */
+      h2.bbb.zzz {
+        color: green;
+      }
+      /* 3 */
+      #elem.bbb {
+        color: blue;
+      }
+      /* 4 */
+      #elem.bbb.zzz {
+        color: orange;
+      }
+      /* 5 */
+      h2#elem.bbb {
+        color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Задача 1</h1>
+    <div class="bbb zzz">.bbb.zzz { color: red; }</div>
+    <h1>Задача 2</h1>
+    <h2 class="bbb zzz">h2.bbb.zzz { color: green; }</h2>
+    <h1>Задача 3</h1>
+    <div id="elem" class="bbb">/* 3 */ #elem.bbb { color: blue; }</div>
+    <h1>Задача 4</h1>
+    <div id="elem" class="bbb zzz">#elem.bbb.zzz { color: orange; }</div>
+    <h1>Задача 5</h1>
+    <h2 class="bbb" id="elem">h2#elem.bbb { color: violet; }</h2>
+  </body>
+</html>
