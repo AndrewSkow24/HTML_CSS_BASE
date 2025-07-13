@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Практика комбинирования CSS селекторов</title>
+    <style>
+      div p {
+        color: red;
+      }
+      div h2 {
+        color: blue;
+      }
+      /* 3 */
+      #block p {
+        color: darkviolet;
+      }
+      /* 4 */
+      #block h2 {
+        color: darkgreen;
+      }
+      /* 5 */
+      .bbb {
+        color: darkslateblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Задача 1</h1>
+    <div>
+      <p>+++</p>
+      <p>+++</p>
+    </div>
+    <div>
+      <p>+++</p>
+    </div>
+
+    <p>---</p>
+    <p>---</p>
+    <h2>Задача 2</h2>
+    <div>
+      <h2>+++</h2>
+      <p>---</p>
+      <p>---</p>
+    </div>
+    <div>
+      <h2>+++</h2>
+      <p>---</p>
+    </div>
+
+    <h2>---</h2>
+    <p>---</p>
+    <h2>Задача 3</h2>
+    <div id="block">
+      <h2>---</h2>
+      <p>+++</p>
+      <p>+++</p>
+    </div>
+    <div>
+      <h2>---</h2>
+      <p>---</p>
+    </div>
+
+    <h2>---</h2>
+    <p>---</p>
+
+    <h2>Задача 4</h2>
+    <div id="block">
+      <h2>---</h2>
+      <p>+++</p>
+      <p>+++</p>
+    </div>
+    <div>
+      <h2>---</h2>
+      <p>---</p>
+    </div>
+
+    <h2>---</h2>
+    <p>---</p>
+
+    <h2>Задача 5</h2>
+    <div id="block">
+      <h2 class="bbb">+++</h2>
+      <p class="bbb">+++</p>
+      <p>---</p>
+
+      <h2 class="bbb">+++</h2>
+      <p>---</p>
+    </div>
+    <div class="bbb">+++</div>
+
+    <h2>---</h2>
+    <p class="bbb">+++</p>
+  </body>
+</html>
