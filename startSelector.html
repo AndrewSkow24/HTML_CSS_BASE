@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Селектор по началу значения атрибута</title>
+    <style>
+      a[href^="https://"]
+      {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Селектор по началу значения атрибута</h1>
+    <p>
+      Селектор по началу значения атрибута позволяет применить стиль к элементу,
+      у которого значение тега начинается с определённого текста.
+    </p>
+    <p>
+      Давайте обратимся к тегу a, у которого значение атрибута href начинается
+      на https и перекрасим его в красный цвет.
+    </p>
+    <a href="file.html">link1</a>
+    <a href="https://code.mu">link2</a>
+  </body>
+</html>
