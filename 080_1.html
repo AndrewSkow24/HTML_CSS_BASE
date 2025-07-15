@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>80_1</title>
+    <style>
+      /* 1. Напишите селектор, который выберет
+        все элементы с атрибутом title. */
+      *[title] {
+        color: red;
+      }
+      /* 2. Напишите селектор, который выберет все абзацы с атрибутом title. */
+      p[title] {
+        color: green;
+      }
+      /* 3. Напишите селектор, который выберет все 
+      абзацы с атрибутом title, который равен 'hello'. */
+      p[title="hello"] {
+        color: darkturquoise;
+      }
+      /* 4. Напишите селектор, который выберет 
+      все ссылки с атрибутом href, значение которого 
+      начинается на 'http://'. */
+      a[href^="https://"]
+      {
+        font-size: 35px;
+        color: darkblue;
+      }
+      /* 5.  Напишите селектор, который выберет 
+      все ссылки с атрибутом href, значение которого 
+      заканчивается на '.html'.*/
+      a[href$=".html"] {
+        color: violet;
+        font-size: 35px;
+      }
+      /* 6. Напишите селектор, который 
+      выберет все абзацы с атрибутом title, 
+      в значении которого есть слово 'hello'. */
+      p[title*="hello"] {
+        color: orange;
+      }
+      /* Напишите селектор, который выберет
+       все абзацы с классом, который начинается на 
+       'top-'. */
+      p[class^="top"] {
+        font-size: 34px;
+        color: palegoldenrod;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 title="h1">заголовок h1 c атрибутом title</h1>
+    <p title="p">абзац p с атрибутом title/p></p>
+    <h1>заголовок h1 без атрибута</h1>
+    <p>абзац p без атрибута</p>
+    <p title="hello">абзац p c атрибутом title="hello"</p>
+    <a href="https://somthing.com">Ссылка, начинающаяся с https://</a>
+    <a href="file.jpeg">ссылка href="file.jpeg"</a>
+    <a href="https://ya.ru">ссылка на ya.ru</a>
+    <a href="file.html">ссылка на file.html</a>
+    <p title="hello world">абзац title c hello</p>
+    <p title="world hello">абзац title c hello</p>
+    <p class="top-header">top-header</p>
+    <p class="top-text">top-text</p>
+  </body>
+</html>

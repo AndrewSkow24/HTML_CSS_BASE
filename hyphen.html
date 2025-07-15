@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Селектор атрибута по дефису в значении</title>
+    <style>
+      p[class|="text"] {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Селектор атрибута по дефису в значении</h1>
+    <p>
+      Селектор атрибута по дефису в значении применяет стиль к элементу,
+      значения атрибута которого разделены дефисом.
+    </p>
+    <p>
+      Давайте все найдём элементы, у которых в значениях разделённых дефисом
+      есть text, и покрасим их в красный цвет.
+    </p>
+    <p class="text-main-header">text1</p>
+    <p class="text-content">text2</p>
+    <p class="test-main">text3</p>
+    <p class="tag-test">text4</p>
+  </body>
+</html>

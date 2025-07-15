@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Селектор по одному из значений атрибутов</title>
+    <style>
+      p[class~="test"] {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Селектор по одному из значений атрибутов</h1>
+    <p>
+      Селектор по одному из значений атрибута задаёт стиль элементу, у которого
+      в атрибуте есть хотя бы одно из указанных значений. При этом все значения
+      атрибута должны быть разделены пробелом.
+    </p>
+    <p class="test main">text1</p>
+    <p class="text">text2</p>
+    <p class="tag test">text 3</p>
+  </body>
+</html>
