@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>81</title>
+    <style>
+      /* непосещённая ссылка */
+      a:link {
+        color: red;
+      }
+      /* посещённая ссылка */
+      a:visited {
+        color: green;
+      }
+      /* навели курсором мыши */
+      a:hover {
+        text-decoration: none;
+      }
+      /* щёлкнули мышкой, но ещё не перешли */
+      a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Состояние ссылок в CSS</h1>
+    <p>
+      a:hover - на ссылку наведён курсор мыши. :hover - псевдокласс. <br />
+      Псевдоклассы позволяют отлавливать разные состояния элемента.
+    </p>
+    <h2>Другие псевдоклассы</h2>
+    <ol>
+      <li>:link - отлов непосещённой ссылки</li>
+      <li>:visited - отлов посещённой ссылки</li>
+      <li>:active - на элемент нажали кнопкой мыши, но ещё не посетили</li>
+    </ol>
+    <h2>Пример</h2>
+    <a href="#">link</a>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>82</title>
+    <style>
+      a:link {
+        color: blue;
+      }
+      a:visited {
+        color: green;
+      }
+      a:hover {
+        color: red;
+        text-decoration: none;
+      }
+      a:active {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Нюансы последовательности состояния ссылок</h1>
+    <p>
+      Псведоклассы ссылок наследуются друг от друга. Если убрать подчёркивание в
+      одном состояние, то оно уберётся и для всех других.
+      <br />Поэтому псевдоклассы следует размещать именно в порядке:
+    </p>
+    <ol>
+      <li>:link</li>
+      <li>:visited</li>
+      <li>:hover</li>
+      <li>:active</li>
+    </ol>
+    <p>
+      Можно использовать следующее мнемоническое правило для запоминания:
+      <b>LoVe HAte</b>
+    </p>
+    <h2>Task 1</h2>
+    <p>
+      Сделайте все ссылки в состоянии :hover красными и неподчеркнутыми, в
+      состоянии :link - голубыми, в состоянии :visited - зелеными, в состоянии
+      :active - черными.
+    </p>
+    <a href="#">link</a>
+  </body>
+</html>
