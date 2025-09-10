@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>131</title>
+    <style>
+      .parent1 {
+        width: 200px;
+        border: 1px solid orange;
+      }
+      .child1 {
+        margin: 100px 50px 30px;
+        height: 50px;
+        border: 1px dashed blue;
+      }
+      .parent2 {
+        width: 400px;
+        border: 1px solid orange;
+      }
+      .child2 {
+        /* сверху-снизу справа-слева одинаково */
+        margin: 30px 100px 50px;
+        border: 1px dashed blue;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Три значения в свойстве margin</h1>
+    <p>Если margin задать три значения</p>
+    <ol>
+      <li>отступ сверху</li>
+      <li>отступ снизу</li>
+      <li>отступ слева и справа</li>
+    </ol>
+    <h2>task 1</h2>
+    <div class="parent1">
+      <div class="child1"></div>
+    </div>
+    <h2>task 2</h2>
+    <div class="parent2">
+      <div class="child2"></div>
+    </div>
+  </body>
+</html>

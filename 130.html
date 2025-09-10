@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>130</title>
+    <style>
+      .parent1 {
+        width: 200px;
+        border: 1px solid orange;
+      }
+      .child1 {
+        /* сверху-снизу по 50, справа-слева по 100 */
+        margin: 100px 50px;
+        height: 50px;
+        border: 1px dashed blue;
+      }
+      .parent2 {
+        width: 200px;
+        border: 1px solid orange;
+      }
+      .child2 {
+        margin: 25px 50px;
+        height: 50px;
+        border: 1px dashed blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Два значения в свойстве margin</h1>
+    <p>
+      Если передать свойству margin два значения, то первое будет одновременно
+      обозначать отступ сверху и снизу, а второе одновременно справа и слева.
+    </p>
+    <h2>Task 1</h2>
+    <div class="parent1">
+      <div class="child1"></div>
+    </div>
+    <h2>Task 2</h2>
+    <div class="parent2">
+      <div class="child2"></div>
+    </div>
+  </body>
+</html>
